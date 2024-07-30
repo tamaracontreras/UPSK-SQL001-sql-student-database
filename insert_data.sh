@@ -58,7 +58,7 @@ MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
 if [[ -z $MAJOR_ID ]]
 then
   # set to null
-
+ MAJOR_ID=null
 fi
     # set to null
 
