@@ -203,3 +203,20 @@ git remote -v
 git remote add origin https://github.com/tamaracontreras/UPSK-SQL001-sql-student-database.git
 git remote -v
 git add .
+git commit -m "trabajo terminado"
+git push -u origin main
+git pull origin main --rebase
+git push -u origin main
+git pull
+gto branch -r
+git branch -r
+__vsc_prompt_cmd_original
+git checkout -b Tam origin/Tam
+git checkout -b Tam
+git branch
+git push
+git push --set-upstream origin Tam
+git pull
+git pull origin Tam
+git config pull.ff only
+git add .
