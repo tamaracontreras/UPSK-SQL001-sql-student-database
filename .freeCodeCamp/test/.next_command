@@ -171,3 +171,4 @@ git remote -v
 git push origin
 git push origin Tam
 ./insert_data.sh
+SELECT courses.csv courses_test.csv insert_data.sh students.csv FROM majors
