@@ -17,10 +17,8 @@ then
   echo $INSERT_MAJOR_RESULT
 
   # get new major_id
-
 fi
-
-  # get course_id
+   # get course_id
 
   # if not found
 
