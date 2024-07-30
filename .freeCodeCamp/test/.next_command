@@ -160,3 +160,13 @@ trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 git remote -v
 git add .
+git commit -m ""
+git commit -m "script"
+git push
+git push
+git push
+git brunch
+git branch
+git remote -v
+git push origin
+git push origin Tam
