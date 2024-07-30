@@ -191,3 +191,4 @@ cp students.csv students_test.csv
 ls --color=auto
 __vsc_prompt_cmd_original
 rm students_test.csv
+rm courses_test.csv
