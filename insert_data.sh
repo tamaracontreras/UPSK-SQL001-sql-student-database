@@ -7,7 +7,7 @@ do
   MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
   echo $MAYOR_ID
   # if not found
-
+#aloja
   # insert major
 
   # get new major_id
