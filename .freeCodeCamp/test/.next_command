@@ -170,3 +170,4 @@ git branch
 git remote -v
 git push origin
 git push origin Tam
+./insert_data.sh
