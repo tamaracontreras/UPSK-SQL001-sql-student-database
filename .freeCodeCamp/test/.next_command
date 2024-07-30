@@ -176,3 +176,4 @@ SELECT courses.csv courses_test.csv insert_data.sh students.csv FROM majors
 SELECT courses.csv courses_test.csv insert_data.sh students.csv FROM majors
 ./insert_data.sh
 ./insert_data.sh
+./insert_data.sh
