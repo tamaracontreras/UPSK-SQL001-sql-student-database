@@ -32,6 +32,7 @@ then
   # insert course
 INSERT_COURSE_RESULT=$($PSQL "INSERT INTO courses(course) VALUES('$COURSE')")
   # get new course_id
+  COURSE_ID=$($PSQL "SELECT course_id FROM courses WHERE course='$COURSE'")
   if [[ $INSERT_COURSE_RESULT == "INSERT 0 1" ]]
 then
   echo "Inserted into courses, $COURSE"
