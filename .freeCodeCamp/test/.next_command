@@ -122,3 +122,5 @@ psql --username=freecodecamp --dbname=postgres
 psql --username=freecodecamp --dbname=postgres
 touch insert_data.sh
 chmod +x insert_data.sh
+.\insert_data.sh
+./insert_data.sh
