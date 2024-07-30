@@ -130,3 +130,4 @@ declare -p IFS
 ./insert_data.sh
 __vsc_prompt_cmd_original
 ./insert_data.sh
+cp courses.csv courses_test.csv
