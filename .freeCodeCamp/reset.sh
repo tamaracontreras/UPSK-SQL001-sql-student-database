@@ -18,3 +18,7 @@ sudo service postgresql stop && sudo service postgresql start && echo "SELECT 'C
 
 # Rebuild database
 psql -U postgres < ./.freeCodeCamp/reset_files/db.sql
+<<<<<<< HEAD
+=======
+cp ./.freeCodeCamp/reset_files/insert_data.sh .
+>>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da

@@ -1,29 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
-#Script to insert data from courses.csv and students.csv into students database
-PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
-cat courses.csv | while  IFS="," read MAJOR COURSE
-do
-  # get major_id
-  MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
-  echo $MAYOR_ID
-  # if not found
-#aloja
-  # insert major
-
-  # get new major_id
-
-  # get course_id
-
-  # if not found
-
-  # insert course
-
-  # get new course_id
-
-  # insert into majors_courses
-
-=======
 
 # Script to insert data from courses.csv and students.csv into students database
 
@@ -98,5 +73,4 @@ do
       echo Inserted into students, $FIRST $LAST
     fi
   fi
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 done

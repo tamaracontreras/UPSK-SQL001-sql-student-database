@@ -25,6 +25,7 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 [[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
+<<<<<<< HEAD
 touch insert_data.sh
 chmod +x insert_data.sh
 chmod +x insert_data.sh
@@ -38,6 +39,8 @@ chmod +x insert_data.sh
 ./insert_data.sh
 ./insert_data.sh
 ./insert_data.sh
+=======
+>>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 [ -d "$HOME/bin" ]
 [ -d "$HOME/.local/bin" ]
 PATH="$HOME/.local/bin:$PATH"
@@ -46,7 +49,38 @@ PATH="$HOME/.local/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]]
 source "$HOME/.rvm/scripts/rvm"
 [[ -n $SSH_CONNECTION ]]
+<<<<<<< HEAD
 '/ide/node' -p '"26695bb54e20" + JSON.stringify(process.env) + "26695bb54e20"'
+=======
+'/ide/node' -p '"67e1098befad" + JSON.stringify(process.env) + "67e1098befad"'
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+[[ "$(uname -s)" =~ ^CYGWIN*|MINGW*|MSYS* ]]
+__vsc_is_windows=0
+[[ "$HISTCONTROL" =~ .. ]]
+__vsc_history_verify=1
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+>>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 builtin unset VSCODE_INJECTION
 [ -z "$VSCODE_SHELL_INTEGRATION" ]
 [ -n "${VSCODE_ENV_REPLACE:-}" ]
@@ -75,6 +109,10 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 echo hello SQL
+<<<<<<< HEAD
+=======
+psql --username=freecodecamp --dbname=postgre
+>>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 psql --username=freecodecamp --dbname=postgres
 builtin unset VSCODE_INJECTION
 [ -z "$VSCODE_SHELL_INTEGRATION" ]
@@ -103,6 +141,7 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 [[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
+<<<<<<< HEAD
 \.insert_data.sh
 chmod +x insert_data.sh
 \.insert_data.sh
@@ -110,6 +149,21 @@ ls --color=auto -l
 chmod +x insert_data.sh
 ./insert_data.sh
 __vsc_prompt_cmd_original
+=======
+psql --username=freecodecamp --dbname=postgres
+psql --username=freecodecamp --dbname=postgres
+touch insert_data.sh
+chmod +x insert_data.sh
+.\insert_data.sh
+./insert_data.sh
+./insert_data.sh
+declare -p IFS
+./insert_data.sh
+./insert_data.sh
+__vsc_prompt_cmd_original
+./insert_data.sh
+cp courses.csv courses_test.csv
+>>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 builtin unset VSCODE_INJECTION
 [ -z "$VSCODE_SHELL_INTEGRATION" ]
 [ -n "${VSCODE_ENV_REPLACE:-}" ]
@@ -137,6 +191,7 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 [[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
+<<<<<<< HEAD
 builtin unset VSCODE_INJECTION
 [ -z "$VSCODE_SHELL_INTEGRATION" ]
 [ -n "${VSCODE_ENV_REPLACE:-}" ]
@@ -244,3 +299,115 @@ git push origin main
 git pull
 git add ..
 git add .
+=======
+git remote -v
+git add .
+git commit -m ""
+git commit -m "script"
+git push
+git push
+git push
+git brunch
+git branch
+git remote -v
+git push origin
+git push origin Tam
+./insert_data.sh
+SELECT courses.csv courses_test.csv insert_data.sh students.csv FROM majors
+./insert_data.sh
+SELECT courses.csv courses_test.csv insert_data.sh students.csv FROM majors
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+\d courses
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+cp students.csv students_test.csv
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+\d students
+./insert_data.sh
+./insert_data.sh
+ls --color=auto
+__vsc_prompt_cmd_original
+rm students_test.csv
+rm courses_test.csv
+ls --color=auto
+pg_dump --help
+pg_dump --clean --create --inserts --username=freecodecamp students > students.sql
+git remote add origin https://github.com/tamaracontreras/UPSK-SQL001-sql-student-database.git
+git remote -v
+git remote -v
+git remote remove origin
+git remote -v
+git remote add origin https://github.com/tamaracontreras/UPSK-SQL001-sql-student-database.git
+git remote -v
+git add .
+git commit -m "trabajo terminado"
+git push -u origin main
+git pull origin main --rebase
+git push -u origin main
+git pull
+gto branch -r
+git branch -r
+__vsc_prompt_cmd_original
+git checkout -b Tam origin/Tam
+git checkout -b Tam
+git branch
+git push
+git push --set-upstream origin Tam
+git pull
+git pull origin Tam
+git config pull.ff only
+git add .
+git commint -m "trabajo concluido"
+git commit -m "trabajo concluido"
+git push --set-upstream origin Tam
+git pull origin Tam
+git fetch origin
+git merge origin/Tam
+git push Tam
+[ -d "$HOME/bin" ]
+[ -d "$HOME/.local/bin" ]
+PATH="$HOME/.local/bin:$PATH"
+[ -e /home/gitpod/.nix-profile/etc/profile.d/nix.sh ]
+. /home/gitpod/.nix-profile/etc/profile.d/nix.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]]
+source "$HOME/.rvm/scripts/rvm"
+[[ -n $SSH_CONNECTION ]]
+'/ide/node' -p '"33afd6228c89" + JSON.stringify(process.env) + "33afd6228c89"'
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+[[ "$(uname -s)" =~ ^CYGWIN*|MINGW*|MSYS* ]]
+__vsc_is_windows=0
+[[ "$HISTCONTROL" =~ .. ]]
+__vsc_history_verify=1
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+git pull origin Tam
+__vsc_prompt_cmd_original
+git branch
+git pull origin Tam
+git push --force origin Tam
+>>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da

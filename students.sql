@@ -1,13 +1,9 @@
-SELECT pg_terminate_backend(pg_stat_activity.pid)
-FROM pg_stat_activity
-WHERE usename = 'freecodecamp';
-
 --
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.6 (Debian 12.6-1.pgdg90+1)
--- Dumped by pg_dump version 12.6 (Debian 12.6-1.pgdg90+1)
+-- Dumped from database version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
+-- Dumped by pg_dump version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,7 +16,7 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE IF EXISTS students;
+DROP DATABASE students;
 --
 -- Name: students; Type: DATABASE; Schema: -; Owner: freecodecamp
 --
@@ -52,19 +48,14 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.courses (
-<<<<<<< HEAD
-=======
     course_id integer NOT NULL,
     course character varying(100) NOT NULL
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 );
 
 
 ALTER TABLE public.courses OWNER TO freecodecamp;
 
 --
-<<<<<<< HEAD
-=======
 -- Name: courses_course_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
 --
 
@@ -87,16 +78,12 @@ ALTER SEQUENCE public.courses_course_id_seq OWNED BY public.courses.course_id;
 
 
 --
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 -- Name: majors; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
 CREATE TABLE public.majors (
-<<<<<<< HEAD
-=======
     major_id integer NOT NULL,
     major character varying(50) NOT NULL
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 );
 
 
@@ -107,19 +94,14 @@ ALTER TABLE public.majors OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.majors_courses (
-<<<<<<< HEAD
-=======
     major_id integer NOT NULL,
     course_id integer NOT NULL
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 );
 
 
 ALTER TABLE public.majors_courses OWNER TO freecodecamp;
 
 --
-<<<<<<< HEAD
-=======
 -- Name: majors_major_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
 --
 
@@ -142,30 +124,21 @@ ALTER SEQUENCE public.majors_major_id_seq OWNED BY public.majors.major_id;
 
 
 --
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 -- Name: students; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
 CREATE TABLE public.students (
-<<<<<<< HEAD
-=======
     student_id integer NOT NULL,
     first_name character varying(50) NOT NULL,
     last_name character varying(50) NOT NULL,
     major_id integer,
     gpa numeric(2,1)
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 );
 
 
 ALTER TABLE public.students OWNER TO freecodecamp;
 
 --
-<<<<<<< HEAD
--- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
---
-
-=======
 -- Name: students_student_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
 --
 
@@ -229,15 +202,12 @@ INSERT INTO public.courses VALUES (36, 'Algorithms');
 INSERT INTO public.courses VALUES (37, 'UNIX');
 INSERT INTO public.courses VALUES (38, 'Server Administration');
 INSERT INTO public.courses VALUES (39, 'Network Security');
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 
 
 --
 -- Data for Name: majors; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-<<<<<<< HEAD
-=======
 INSERT INTO public.majors VALUES (36, 'Database Administration');
 INSERT INTO public.majors VALUES (37, 'Web Development');
 INSERT INTO public.majors VALUES (38, 'Data Science');
@@ -245,15 +215,12 @@ INSERT INTO public.majors VALUES (39, 'Network Engineering');
 INSERT INTO public.majors VALUES (40, 'Computer Programming');
 INSERT INTO public.majors VALUES (41, 'Game Design');
 INSERT INTO public.majors VALUES (42, 'System Administration');
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 
 
 --
 -- Data for Name: majors_courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-<<<<<<< HEAD
-=======
 INSERT INTO public.majors_courses VALUES (36, 23);
 INSERT INTO public.majors_courses VALUES (37, 24);
 INSERT INTO public.majors_courses VALUES (36, 25);
@@ -282,15 +249,12 @@ INSERT INTO public.majors_courses VALUES (40, 32);
 INSERT INTO public.majors_courses VALUES (39, 39);
 INSERT INTO public.majors_courses VALUES (37, 30);
 INSERT INTO public.majors_courses VALUES (39, 36);
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 
 
 --
 -- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-<<<<<<< HEAD
-=======
 INSERT INTO public.students VALUES (6, 'Rhea', 'Kellems', 36, 2.5);
 INSERT INTO public.students VALUES (7, 'Emma', 'Gilbert', NULL, NULL);
 INSERT INTO public.students VALUES (8, 'Kimberly', 'Whitley', 37, 3.8);
@@ -399,7 +363,6 @@ ALTER TABLE ONLY public.majors_courses
 
 ALTER TABLE ONLY public.students
     ADD CONSTRAINT students_major_id_fkey FOREIGN KEY (major_id) REFERENCES public.majors(major_id);
->>>>>>> df2f5ef0227615ef3f70931d4c1475b3ccace2da
 
 
 --
