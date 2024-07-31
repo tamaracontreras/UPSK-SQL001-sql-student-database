@@ -14,7 +14,7 @@
 
 ## Crear tablas Students, majors, courses, majors_courses:
 1. La creamos con el comando **CREATE TABLE students();**
-2. La segunda tabla será para cada especialización única que aparece en los datos.Crea una tabla llamada majors.
+2. La segunda tabla será para cada especialización única que aparece en los datos. Crea una tabla llamada **majors**.
 3. La creamos de la misma manera que anteriormente
 4. La tercera tabla se llamará **courses**
 5. La creamos de la misma manera
