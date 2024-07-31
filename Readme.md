@@ -1,4 +1,5 @@
 # UPSK-SQL001-sql-student-database
+## Tutorial 1
 
 ## psql Login
 
@@ -577,21 +578,22 @@ Debajo del nuevo comentario get major_id, configure la variable MAJOR_ID en una 
 
 ## Add if -z MAJOR_ID
 Al observar los datos de prueba, se encontró el ID de todos ellos, excepto el valor nulo. Debajo del comentario "si no se encuentra" más reciente, agregue un "if" que verifique si la variable está vacía. Coloque el comentario "Configurar como nulo" en su área de declaraciones.
-
+```
 if [[ -z $MAJOR_ID ]]
 then
   # set to null
 
 fi
-
+```
 ## Set MAJOR_ID to null
 Cuando vaya a insertar los datos del estudiante, deberá utilizar MAJOR_ID si se encuentra o null si no lo encuentra. Debajo del comentario de configuración nula, configure la variable MAJOR_ID como null para poder usarla para insertar los datos.
-
+```
 if [[ -z $MAJOR_ID ]]
 then
   # set to null
   MAJOR_ID=null
 fi
+```
 ## Mueva echo MAJOR_ID
 Mueva la línea echo $MAJOR_ID debajo de la declaración if para que pueda ejecutar el script y ver el valor de la variable si se encuentra o no el major_id.
 * Mueva la línea sugerida debajo del final de la declaración if [[ -z $MAJOR_ID ]]
@@ -673,4 +675,3 @@ List the contents of the folder again to make sure they're gone.
 Este es el último paso. Hay varias opciones.
 Ingresa **pg_dump --clean --create --inserts --username=freecodecamp students > students.sql** en la terminal para volcar la base de datos en un archivo students.sql. Esto guardará todos los comandos necesarios para reconstruirla. Echa un vistazo rápido al archivo cuando hayas terminado.
 
-Versión en Notion : https://www.notion.so/UPSK-SQL001-sql-student-database-3415c419c1a549c3bf226b952d76f5bb?pvs=4
