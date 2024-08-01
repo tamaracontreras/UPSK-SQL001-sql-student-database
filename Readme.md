@@ -252,7 +252,7 @@ Ejecute el script para ver qué sucede.
 
 * ./insert_data.sh
 
-## Aguega if -z MAJOR_ID
+## Agrega if -z MAJOR_ID
 Entonces, revisó cada una de major del archivo CSV e intentó encontrar major_id para cada una de ellas en la base de datos. Parece que solo encontró la que insertó manualmente antes. El resto estaban vacíos. Debajo de su primer comentario if not found, agregue una condición if que verifique si la variable MAJOR_ID está vacía. Puede hacerlo con esta prueba: [[ -z $MAJOR_ID ]]. Coloque los siguientes dos comentarios en el área de declaraciones del if.
 ```
 if [[ -z $MAJOR_ID ]]
@@ -358,7 +358,7 @@ Ejecute el script nuevamente para ver qué se inserta cuando la base de datos es
 Insertó cuatro en ese momento. En el indicador de psql, visualice todos los datos en la tabla majors:
 * SELECT * FROM majors;
 
-## Add if major
+## Agrega if major
 No querrás agregar la primera línea del archivo CSV a la base de datos, ya que son solo títulos. En tu secuencia de comandos, agrega una condición if en la parte superior de tu bucle que verifique si $MAJOR != major. Coloca todo el código y los comentarios existentes en tu bucle en su área de declaraciones para que solo haga algo que no sea la primera línea.
 ```
 do
@@ -391,7 +391,7 @@ do
   fi
 done
 ```
-# TRUNCATE majors CASCADE
+## TRUNCATE majors CASCADE
 En el indicador de psql, utilice TRUNCATE para eliminar todos los datos de la tabla de majors
 
 * TRUNCATE majors, students, majors_courses;
@@ -413,7 +413,7 @@ Hay tres especialidades únicas en los datos de prueba. Esas fueron las tres que
 
 * Borrar :echo $INSERT_MAJOR_RESULT
 
-## Add if INSERT_MAJOR_RESULT
+## Agrega if INSERT_MAJOR_RESULT
 Quieres un mensaje más agradable cuando se inserta algo para que sea más informativo. Debajo de la variable INSERT_MAJOR_RESULT, agrega una declaración if que verifique si la variable es igual a INSERT 0 1, que era lo que estaba imprimiendo. Usa echo para imprimir Inserted into majors, $MAJOR en el área de declaraciones del if.
 ```
 if [[ $INSERT_MAJOR_RESULT == "INSERT 0 1" ]]
@@ -428,16 +428,16 @@ En el indicador de psql, trunque nuevamente la tabla majors para poder ejecutar 
 Vea si esta vacía , ejecute el script: 
 * ./insert_data.sh
 
-## Add MAJOR_ID
+## Agrega  MAJOR_ID
 Está empezando a tomar forma. Debajo del comentario para obtener el nuevo major_id, configure la variable MAJOR_ID en una consulta que obtenga el nuevo major_id de la base de datos.
 * MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
 
-## Add COURSE_ID
+## Agrega COURSE_ID
 De esta forma, el script insertará las carreras correctamente. A continuación, se encuentran los cursos. Serán los mismos pasos que para las carreras. Debajo del comentario get course_id, agrega una variable COURSE_ID que obtenga el course_id de la base de datos. Recuerda que tu variable COURSE tendrá el curso actual en el bucle.
 
 * COURSE_ID=$($PSQL "SELECT course_id FROM courses WHERE course='$COURSE'")
 
-## Agregue if -z COURSE_ID
+## Agrega if -z COURSE_ID
 Es lo mismo que las especialidades, por lo que debajo del segundo comentario "si no se encuentra", agrega una declaración "if" que verifique si la consulta estaba vacía para que puedas insertar el curso si es necesario. Coloca los comentarios "insert course" y "get new course_id" existentes en el área de declaraciones del "if".
 ```
 if [[ -z $COURSE_ID ]]
@@ -472,24 +472,24 @@ In the psql prompt, truncate the data from the `majors` table so you can run t
 Parece que funcionó. Los datos de prueba tienen tres cursos únicos y se agregaron tres a la base de datos. Vea los datos en la tabla de cursos para asegurarse de que sean correctos.
 * SELECT * FROM courses;
 
-## Add echo TRUNCATE tables
+## Agrega echo TRUNCATE tables
 Excelente. En lugar de eliminar manualmente los datos cada vez que desee ejecutar el script, agregue el comando para que lo haga por usted. Cerca de la parte superior del archivo, debajo de la variable PSQL, use echo para consultar la base de datos. En la consulta, trunque las cuatro tablas en este orden: estudiantes, carreras, cursos, carreras_especialidades.
 * echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")
 
 Ejecute el script:
 * ./insert_data.sh
 
-## Add COURSE_ID
+## Agrega COURSE_ID
 Genial. Eso lo hace más fácil. Debajo del comentario de obtención del nuevo course_id, establece el COURSE_ID en el course_id recién insertado.
 
 * COURSE_ID=$($PSQL "SELECT course_id FROM courses WHERE course='$COURSE'")
 
-## Add INSERT_MAJORS_COURSES_RESULT
+## Agrega INSERT_MAJORS_COURSES_RESULT
 Una cosa más para agregar a este archivo. Debajo del comentario de cursos insert into majors_courses, crea una variable INSERT_MAJORS_COURSES_RESULT. Úsala junto con las variables MAJOR_ID y COURSE_ID que creaste para insertar una fila en la tabla majors_courses. Asegúrate de que la consulta tenga primero la columna major_id. Además, no necesitarás comillas alrededor de los valores de los identificadores.
 
 * INSERT_MAJORS_COURSES_RESULT=$($PSQL "INSERT INTO majors_courses(major_id, course_id) VALUES($MAJOR_ID, $COURSE_ID)")
 
-## Add if INSERT_MAJORS_COURSES_RESULT
+## Agrega if INSERT_MAJORS_COURSES_RESULT
 Debajo de la variable que acabas de crear, agrega una condición if que verifique si es igual a INSERT 0 1 como las demás. En su área de declaraciones, usa echo para imprimir Inserted into majors_courses, $MAJOR : $COURSE.
 ```
 if [[ $INSERT_MAJORS_COURSES_RESULT == "INSERT 0 1" ]]
@@ -517,7 +517,7 @@ Bien, esa parte del script está lista. A continuación, debes agregar todo lo q
 
 * cp students.csv students_test.csv
 
-## Remove all but fours lines
+## Elimina todas menos cuatro líneas
 En el archivo students_test.csv, elimine todo excepto las primeras cinco líneas, como hizo en el otro archivo de prueba. Asegúrese de que haya una línea vacía en la parte inferior nuevamente.
 
 first_name,last_name,major,gpa
@@ -542,7 +542,7 @@ Funciona 😅 Imprime el primer elemento de cada fila del archivo CSV. Está imp
 
 Borre **echo $FIRST**
 
-## Add if first_name
+## Agrega if first_name
 Agregue una condición if al bucle que verifique si la variable FIRST no es igual a first_name, de modo que no haga nada en la primera línea del archivo. No coloque nada en el área de declaraciones por ahora.
 ```
 cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
@@ -571,12 +571,12 @@ do
   fi
 done
 ```
-## Add MAJOR_ID
+## Agrega MAJOR_ID
 Debajo del nuevo comentario get major_id, configure la variable MAJOR_ID en una consulta que obtenga el major_id para la especialidad de los estudiantes actuales.
 
 * MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
 
-## Add if -z MAJOR_ID
+## Agrega if -z MAJOR_ID
 Al observar los datos de prueba, se encontró el ID de todos ellos, excepto el valor nulo. Debajo del comentario "si no se encuentra" más reciente, agregue un "if" que verifique si la variable está vacía. Coloque el comentario "Configurar como nulo" en su área de declaraciones.
 ```
 if [[ -z $MAJOR_ID ]]
@@ -607,12 +607,12 @@ Una última cosa para agregar. En el indicador de psql, visualice los detalles d
 
 * \d students
 
-## Add INSERT_STUDENT_RESULT
+## Agrega INSERT_STUDENT_RESULT
 Necesitará configurar las cuatro columnas al agregar la información del estudiante. Todas ellas excepto student_id. Debajo del comentario de inserción del estudiante, cree una variable INSERT_STUDENT_RESULT que agregue al estudiante a la base de datos. Agregue las columnas en el orden en que aparecen en los datos y asegúrese de poner solo las dos columnas VARCHAR entre comillas simples.
 
 * INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)")
 
-## Add if INSERT_STUDENT_RESULT
+## Agrega if INSERT_STUDENT_RESULT
 Debajo de la variable que acabas de crear, agrega una declaración if que verifique si es igual a INSERT 0 1 como las demás. Si lo es, usa echo para imprimir Inserted into students, <first_name> <last_name>.
 ```
 if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]
