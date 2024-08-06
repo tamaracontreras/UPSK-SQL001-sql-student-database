@@ -46,7 +46,8 @@ Allí está la base de datos de tus alumnos. Conéctate a ella.
 
 * echo -e "\n~~ My Computer Science Students ~~\n"
 
-* echo -e "\\n~~ My Computer Science Students ~~\\n"* utiliza el comando echo con la opción -e para habilitar la interpretación de las secuencias de escape. Esto permite agregar nuevas líneas antes y después del texto "~~ My Computer Science Students ~~", creando un encabezado visualmente separado en la salida del script.  
+* echo -e "\\n~~ My Computer Science Students ~~\\n"
+*  utiliza el comando echo con la opción -e para habilitar la interpretación de las secuencias de escape. Esto permite agregar nuevas líneas antes y después del texto "~~ My Computer Science Students ~~", creando un encabezado visualmente separado en la salida del script.  
 
 ### Ejecuta el script: **./nombredelarchivo**
 * ./student_info.sh
